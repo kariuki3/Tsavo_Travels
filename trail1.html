@@ -2,77 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="Images/Tsavo Travels Safari Sunset Logo.png" alt="Tsavo Trails Logo" width="100">
-    <title>Tsavo Trails | Trail 1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Enjoy wide-open plains and spectacular wildlife viewing as you explore the beautiful African savannah.">
+    <title>Tsavo Trails | The Savannah Loop</title>
+    <link rel="stylesheet" href="css/alltrail.css">
 </head>
- 
-<section id="trail1">
-    <h2>Trail 1: The Savannah Loop</h2>
-    <p>Experience the vast savannahs of Tsavo National Park on this scenic loop trail. Enjoy sightings of elephants, lions, and a variety of bird species as you traverse the open landscapes.</p>
-    <ul>
-        <li>Distance: 5 km</li>
-        <li>Difficulty: Moderate</li>
-        <li>Estimated Time: 2-3 hours</li>
-    </ul>
-    <p>Make sure to bring your camera and binoculars for an unforgettable wildlife experience!</p>
-</section>
- 
-<table border="3">
-    <caption>Trail Information</caption>
-    <tr>
-        <th>Trail Name</th>
-        <th>Distance</th>
-        <th>Difficulty</th>
-        <th>Estimated Time</th>
-        <th>Highlights</th>
-    </tr>
-    <tr>
-        <td>Trail 1: The Savannah Loop</td>
-        <td>5 km</td>
-        <td>Moderate</td>
-        <td>2-3 hours</td>
-    </tr>
-    <tr>
-        <td>Trail 2: The River Walk</td>
-        <td>3 km</td>
-        <td>Easy</td>
-        <td>1-2 hours</td>
-    </tr>
-    <tr>
-        <td>Trail 3: The Rocky Ridge</td>
-        <td>8 km</td>
-        <td>Hard</td>
-        <td>4-5 hours</td>
-    </tr>
-    <tr>
-        <td>Trail 4: The Acacia Path</td>
-        <td>4 km</td>
-        <td>Easy</td>
-        <td>1.5-2 hours</td>
-    </tr>
-    <tr>
-        <td>Trail 5: The Baobab Trail</td>
-        <td>6 km</td>
-        <td>Moderate</td>
-        <td>2.5-3 hours</td>
-    </tr>
-    <tr>
-        <td>Trail 6: The Sunset Vista</td>
-        <td>5 km</td>
-        <td>Moderate</td>
-        <td>2-3 hours</td>
-    </tr>
-</table>
- 
-<article>
-    <h3>Trail Highlights</h3>
-    <p>This trail offers a unique opportunity to witness the diverse wildlife of Tsavo National Park. Keep an eye out for elephants, lions, giraffes, and a variety of bird species as you explore the savannah landscapes.</p>
-    <p>Don't forget to bring your camera and binoculars for an unforgettable wildlife experience!</p>
-</article>
- 
- 
- 
- 
+<body>
+    <header>
+        <a href="index.html" aria-label="Tsavo Trails home">
+            <img src="Images/Tsavo_Trails_Safari_Sunset_Logo.png"
+                 alt="Tsavo Trails safari logo" width="145">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INTRODUCTION: trail title, description and main photograph -->
+        <section class="trail-hero">
+            <div class="trail-hero-content">
+                <p class="eyebrow">TSAVO TRAILS EXPERIENCE · TRAIL 01</p>
+                <h1>The Savannah Loop</h1>
+                <p>Enjoy wide-open plains and spectacular wildlife viewing as you explore the beautiful African savannah.</p>
+            </div>
+            <img src="Images/Elephants_walking.jpg" alt="Elephants walking through the African savannah">
+        </section>
+
+        <!-- QUICK FACTS: the main details visitors need before choosing a trail -->
+        <section class="trail-details" aria-labelledby="trail-details-heading">
+            <h2 id="trail-details-heading">Trail Information</h2>
+            <div class="details-grid">
+                <article class="detail-card">
+                    <span class="detail-label">Distance</span>
+                    <strong>5 km</strong>
+                </article>
+                <article class="detail-card">
+                    <span class="detail-label">Difficulty</span>
+                    <strong>Moderate</strong>
+                </article>
+                <article class="detail-card">
+                    <span class="detail-label">Estimated Time</span>
+                    <strong>2–3 hours</strong>
+                </article>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS: more information about what visitors can experience -->
+        <section class="trail-highlights">
+            <div class="highlights-content">
+                <p class="eyebrow">WHAT TO EXPECT</p>
+                <h2>Trail Highlights</h2>
+                <p>Open savannah plains, elephants and other wildlife, and excellent photography opportunities.</p>
+                <p>Keep your camera and binoculars ready as you take in the wide landscapes and watch wildlife in its natural habitat.</p>
+            </div>
+            <aside class="trail-note">
+                <h3>Before You Go</h3>
+                <p>Bring drinking water, wear suitable footwear and follow your safari guide's safety instructions. Always observe wildlife from a safe distance.</p>
+            </aside>
+        </section>
+
+        <!-- NAVIGATION: links visitors to the other two trails -->
+        <section class="other-trails">
+            <h2>Explore More Trails</h2>
+            <div class="other-trails-links">
+                <a href="trail1.html">The Savannah Loop</a>
+                <a href="trail2.html">The River Walk</a>
+                <a href="trail3.html">The Mountain Ascent</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Contact us for information about safari tours, wildlife photography trips and accommodation packages.</p>
+            <address>
+                <p>Email: <a href="mailto:info@tsavotrails.com">info@tsavotrails.com</a></p>
+                <p>Phone: <a href="tel:+254700000000">+254 700 000 000</a></p>
+                <p>Location: Nairobi, Kenya</p>
+            </address>
+        </section>
+
+        <section id="quicklinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="trail1.html">The Savannah Loop</a></li>
+                <li><a href="trail2.html">The River Walk</a></li>
+                <li><a href="trail3.html">The Mountain Ascent</a></li>
+            </ul>
+        </section>
+
+        <section id="social-media">
+            <h2>Find Us Online</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            </ul>
+        </section>
+
+        <section id="copyright">
+            <p>&copy; 2026 Tsavo Trails. All rights reserved.</p>
+        </section>
+    </footer>
+</body>
 </html>

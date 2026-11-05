@@ -1,0 +1,691 @@
+/* =========================================================
+   TSAVO TRAILS - HOME PAGE STYLES
+   ========================================================= */
+
+   /*universal selector to remove default margin and padding, and set box-sizing to border-box for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HTML document settings
+   - scroll-behavior: smooth for smooth scrolling
+   - scroll-padding-top: 105px to offset the sticky header height */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+/*Body styling
+   - font-family: Arial, Helvetica, sans-serif for a clean and readable font
+   - line-height: 1.7 for better readability
+   - color: #24332d for text color
+   - background: #f5f7f5 for a light background color */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #24332d;
+    background: #f5f7f5;
+}
+
+/* STICKY HEADER
+   - position: sticky to keep the header at the top of the viewport
+   - top: 0 to stick it to the top
+   - z-index: 1000 to ensure it stays above other content
+   - min-height: 88px for a consistent header height
+   - padding: 12px 7% for spacing inside the header
+   - display: flex for flexible layout
+   - align-items: center to vertically center items
+   - justify-content: space-between to space out items
+   - gap: 24px for spacing between items
+   - background: linear-gradient with an elephant image for visual appeal
+   - box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2) for subtle shadow effect */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 88px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    /* Elephant image is the header background */
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.78), rgba(8, 25, 27, 0.78)),
+        url("../Images/Elephant_eating_bushes.jpg") center 42% / cover no-repeat;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Logo link and image
+   - The logo is inside an anchor in the HTML, so style the anchor and its image. */
+header > a {
+    display: block;
+    flex-shrink: 0;
+}
+
+header > a img {
+    display: block;
+    width: 145px;
+    max-height: 68px;
+    object-fit: contain;
+
+}
+
+header nav {
+    margin-left: auto;
+    align-self: flex-end;
+    padding-bottom: 6px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    transition: color 0.25s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    color: #f4a261;
+    transition: color 0.25s ease;
+}
+
+/* HERO SECTION */
+#hero {
+    min-height: 650px;
+    padding: 110px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+
+    /* Giraffe image is the hero background */
+    background:
+        linear-gradient(90deg, rgba(7, 24, 24, 0.76) 0%, rgba(7, 24, 24, 0.38) 55%, rgba(7, 24, 24, 0.08) 100%),
+        url("../Images/Bg_Giraffe.jpg") center 45% / cover no-repeat;
+}
+
+#hero h1 {
+    max-width: 700px;
+    margin-bottom: 18px;
+    font-size: clamp(2.8rem, 6vw, 5.6rem);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+#hero p {
+    max-width: 650px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+#hero p strong {
+    color: #ffc08a;
+    font-size: 1.2rem;
+}
+
+/* GENERAL MAIN SECTIONS */
+main > section:not(#hero) {
+    padding: 75px 8%;
+    background: #fff;
+    border-bottom: 1px solid #e8ece8;
+}
+
+main > section:not(#hero) h2 {
+    margin-bottom: 28px;
+    color: #174b3a;
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+main > section:not(#hero) h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 4px;
+    background: #e98b4a;
+}
+
+/* FEATURED SAFARI EXPERIENCES */
+
+#featured-trails {
+    padding: 75px 8%;
+    background: #fff;
+}
+
+#featured-trails h2 {
+    margin-bottom: 40px;
+    color: #174b3a;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+/* Cards container */
+
+.trails-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Individual trail card */
+
+.trail-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 1px solid #e5ece6;
+
+    box-shadow: 0 8px 22px rgba(22, 55, 42, 0.09);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Card hover effect */
+
+.trail-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 14px 30px rgba(22, 55, 42, 0.16);
+}
+
+/* Trail images */
+
+.trail-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* Card content */
+
+.trail-content {
+    padding: 24px;
+}
+
+.trail-content h3 {
+    color: #174b3a;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.trail-content p {
+    color: #59665e;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+/* View button */
+
+.view-btn {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    background: #e98b4a;
+    color: #fff;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #174b3a;
+}
+
+/* Services */
+#services {
+    padding: 75px 8%;
+    background: #fff;
+}
+
+#services h2 {
+    margin-bottom: 40px;
+    color: #174b3a;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+/* Services cards container
+   - CSS Grid arranges the service cards in equal columns on desktop. */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Individual trail card */
+
+.services-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    border: 1px solid #e5ece6;
+
+    box-shadow: 0 8px 22px rgba(22, 55, 42, 0.09);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+
+.services-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 14px 30px rgba(22, 55, 42, 0.16);
+}
+
+/* Trail images */
+
+.services-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* Card content */
+
+.services-content {
+    padding: 24px;
+}
+
+.services-content h3 {
+    color: #174b3a;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.services-content p {
+    color: #59665e;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+/* DESTINATIONS */
+#destinations ol {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#destinations li {
+    padding: 18px;
+    color: #174b3a;
+    font-weight: 700;
+    background: #f5f8f5;
+    border-radius: 9px;
+}
+
+/* SAFARI IMAGE GALLERY
+   - The viewport clips the horizontal row to create the carousel window.
+   - The track keeps all gallery images in one row.
+   - Scroll snapping helps images stop neatly in view.
+   - JavaScript controls for arrows and automatic movement will be added later. */
+
+#gallery {
+    padding: 75px 8%;
+    background: #fff;
+    overflow: hidden;
+}
+
+#gallery h2 {
+    margin-bottom: 40px;
+    color: #174b3a;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+/* Main gallery container */
+
+.gallery-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Images viewport */
+
+.gallery-viewport {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.gallery-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* Images track */
+
+.gallery-track {
+    display: flex;
+    gap: 20px;
+}
+
+/* Individual images */
+
+.gallery-track img {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+    height: 260px;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    scroll-snap-align: start;
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.gallery-track img:hover {
+    transform: scale(1.04);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation buttons */
+
+.gallery-btn {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #174b3a;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                transform 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background: #e98b4a;
+    transform: scale(1.1);
+}
+
+/* FOOTER - SECTIONS ARRANGED LEFT TO RIGHT */
+footer {
+    padding: 58px 8% 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+
+    /* Reuse the elephant photograph from the header */
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.88), rgba(8, 25, 27, 0.90)),
+        url("../Images/Elephant_eating_bushes.jpg") center 55% / cover no-repeat;
+    color: #fff;
+}
+
+footer section {
+    flex: 1 1 190px;
+}
+
+footer #contact-info {
+    flex: 2 1 300px;
+}
+
+footer h2 {
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+footer p,
+footer address {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.93rem;
+    font-style: normal;
+}
+
+footer address p {
+    margin-top: 8px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 7px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #ffc08a;
+    text-decoration: underline;
+}
+
+footer #copyright {
+    flex: 0 0 100%;
+    margin-top: 18px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+   - Trail and service cards use two columns.
+   - The gallery shows two images at a time.
+   ========================================================= */
+@media (max-width: 900px) {
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .trails-container,
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-track img {
+        flex: 0 0 calc((100% - 20px) / 2);
+        width: calc((100% - 20px) / 2);
+    }
+
+    #destinations ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   - Header stacks the logo above the navigation.
+   - Cards and destinations become one column.
+   - Gallery shows one image at a time and allows touch swiping.
+   ========================================================= */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        min-height: auto;
+        padding: 12px 5%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* The logo image is nested inside the header anchor. */
+    header > a img {
+        width: 120px;
+        max-height: 55px;
+    }
+
+    header nav {
+        width: 100%;
+        margin: 0;
+        align-self: center;
+        padding-bottom: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    header nav a {
+        font-size: 0.72rem;
+    }
+
+    #hero {
+        min-height: 560px;
+        padding: 75px 7%;
+        background-position: 58% center;
+    }
+
+    #hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    #hero p {
+        font-size: 0.96rem;
+    }
+
+    main > section:not(#hero) {
+        padding: 52px 7%;
+    }
+
+    .trails-container,
+    .services-container,
+    #destinations ol {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        gap: 7px;
+    }
+
+    .gallery-track {
+        gap: 12px;
+    }
+
+    .gallery-track img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 230px;
+    }
+
+    .gallery-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 45px 7% 20px;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    footer section,
+    footer #contact-info {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+
+
+
+/* KEYBOARD ACCESSIBILITY
+   - Provide a visible focus outline for keyboard navigation. */
+.gallery-btn:focus-visible,
+.gallery-viewport:focus-visible,
+.view-btn:focus-visible,
+header nav a:focus-visible,
+footer a:focus-visible {
+    outline: 3px solid #e98b4a;
+    outline-offset: 4px;
+}
+
+/* REDUCED MOTION
+   - Respect visitors who prefer less animation in their device settings. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .trail-card,
+    .trail-card:hover,
+    .gallery-track img,
+    .gallery-track img:hover,
+    .gallery-btn,
+    .gallery-btn:hover {
+        transition: none;
+        transform: none;
+    }
+}

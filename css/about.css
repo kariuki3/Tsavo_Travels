@@ -1,0 +1,394 @@
+/* =========================================================
+   TSAVO TRAILS - ABOUT PAGE STYLES
+   This stylesheet is only for about.html.
+   The header and footer use the same design as the homepage.
+   ========================================================= */
+
+/* UNIVERSAL SELECTOR
+   Remove browser default margin and padding and use border-box sizing. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML DOCUMENT SETTINGS
+   Smooth scrolling and account for the sticky header when jumping to sections. */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+/* BODY STYLING
+   Use the same font, text colour and background as the homepage. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #24332d;
+    background: #f5f7f5;
+}
+
+/* =========================================================
+   HEADER
+   Same sticky header, logo, navigation and elephant background
+   used on the homepage.
+   ========================================================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 88px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    /* Dark overlay makes the navigation easy to read. */
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.78), rgba(8, 25, 27, 0.78)),
+        url("../Images/Elephant_eating_bushes.jpg") center 42% / cover no-repeat;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* The logo is wrapped in a link on the HTML page. */
+header > a {
+    display: block;
+    flex-shrink: 0;
+}
+
+header > a img {
+    display: block;
+    width: 145px;
+    max-height: 68px;
+    object-fit: contain;
+}
+
+/* Position the navigation on the right side of the header. */
+header nav {
+    margin-left: auto;
+    align-self: flex-end;
+    padding-bottom: 6px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    transition: color 0.25s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    color: #f4a261;
+}
+
+/* =========================================================
+About-us 
+   ========================================================= */
+#about-us {
+    min-height: 510px;
+    padding: 100px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+
+    background:
+        linear-gradient(90deg, rgba(7, 24, 24, 0.76) 0%, rgba(7, 24, 24, 0.38) 55%, rgba(7, 24, 24, 0.08) 100%),
+        url("../Images/jon-flobrant-rB7-LCa_diU-unsplash.jpg") center 45% / cover no-repeat;
+}
+
+#about-us h1 {
+    max-width: 700px;
+    margin-bottom: 18px;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+#about-us p {
+    max-width: 680px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+#about-us p strong {
+    color: #ffc08a;
+    font-size: 1.2rem;
+}
+
+/* =========================================================
+   MISSION AND VALUES SECTIONS
+   Both sections use white backgrounds, green headings and
+   orange heading underlines to match the homepage sections.
+   ========================================================= */
+#our-mission,
+#our-values {
+    padding: 75px 8%;
+    background: #fff;
+    border-bottom: 1px solid #e8ece8;
+}
+
+#our-mission h2,
+#our-values h2 {
+    margin-bottom: 28px;
+    color: #174b3a;
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+#our-mission h2::after,
+#our-values h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 4px;
+    background: #e98b4a;
+}
+
+/* Mission text is kept in a readable centred column. */
+#our-mission p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #59665e;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+/* Values list: display the three values as responsive cards. */
+#our-values ul {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    list-style: none;
+}
+
+/* Each list item becomes an individual value card. */
+#our-values li {
+    min-height: 175px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #59665e;
+    background: #f5f8f5;
+    border: 1px solid #e5ece6;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(22, 55, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Move the value card slightly when the visitor hovers over it. */
+#our-values li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(22, 55, 42, 0.14);
+}
+
+#our-values li strong {
+    color: #174b3a;
+    font-size: 1.2rem;
+}
+
+/* =========================================================
+   FOOTER
+   Same layout, elephant background, dark overlay, colours,
+   spacing and links as the homepage footer.
+   ========================================================= */
+footer {
+    padding: 58px 8% 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.88), rgba(8, 25, 27, 0.90)),
+        url("../Images/Elephant_eating_bushes.jpg") center 55% / cover no-repeat;
+
+    color: #fff;
+}
+
+footer section {
+    flex: 1 1 190px;
+}
+
+footer #contact-info {
+    flex: 2 1 300px;
+}
+
+footer h2 {
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+footer p,
+footer address {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.93rem;
+    font-style: normal;
+}
+
+footer address p {
+    margin-top: 8px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 7px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #ffc08a;
+    text-decoration: underline;
+}
+
+footer #copyright {
+    flex: 0 0 100%;
+    margin-top: 18px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   TABLET RESPONSIVE DESIGN
+   Reduce spacing and show the values in two columns.
+   ========================================================= */
+@media (max-width: 900px) {
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #our-values ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   Stack the header, introduction and value cards on small screens.
+   ========================================================= */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    header {
+        min-height: auto;
+        padding: 12px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header > a img {
+        width: 120px;
+        max-height: 55px;
+    }
+
+    header nav {
+        width: 100%;
+        margin: 0;
+        align-self: auto;
+        padding-bottom: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    header nav a {
+        font-size: 0.72rem;
+    }
+
+    #about-us {
+        min-height: 480px;
+        padding: 75px 7%;
+        background-position: 58% center;
+    }
+
+    #about-us h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    #about-us p {
+        font-size: 0.96rem;
+    }
+
+    #our-mission,
+    #our-values {
+        padding: 52px 7%;
+    }
+
+    #our-values ul {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #our-values li {
+        min-height: auto;
+    }
+
+    footer {
+        padding: 45px 7% 20px;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    footer section,
+    footer #contact-info {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+/* ACCESSIBILITY
+   Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -4,55 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tsavo Travels | Home</title>
+    <meta name="description" content="Discover Kenya's wildlife and landscapes with Tsavo Trails guided safari experiences.">
+    <title>Tsavo Trails | Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="Images/Tsavo_Travels_Safari_Sunset_Logo.png" alt="Tsavo Travels safari logo" width="110">
-        <h1>Welcome to Tsavo Travels</h1>
-        <p>Discover Kenya's wild beauty, one adventure at a time.</p>
+        <a href="index.html" aria-label="Tsavo Trails home">
+            <img src="Images/Tsavo_Trails_Safari_Sunset_Logo.png" alt="Tsavo Trails safari logo" width="145">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
     </header>
 
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="intro">
-            <h2>Discover the Beauty of Tsavo</h2>
+        <section id="hero">
+            <h1>Welcome to Tsavo Trails</h1>
+            <p><strong>Discover the beauty of Kenya's wildlife and landscapes with our guided safari experiences.</strong></p>
             <p>Explore the breathtaking landscapes and diverse wildlife of Tsavo National Park. Our safari experiences are designed for nature lovers, families and adventure seekers.</p>
-            <img src="Images/Bedview.jpg" alt="Golden sunset over the open African savannah" width="600">
         </section>
 
         <section id="featured-trails">
             <h2>Featured Safari Experiences</h2>
-            <ul>
-                <li><strong>The Savannah Loop:</strong> Enjoy wide-open plains and spectacular wildlife viewing.</li>
-                <li><strong>The River Walk:</strong> Discover the plants and animals found near the river.</li>
-                <li><strong>The Mountain Ascent:</strong> Take in beautiful views of the surrounding landscape.</li>
-            </ul>
+
+            <div class="trails-container">
+
+                <!-- Savannah Loop -->
+                <article class="trail-card">
+                    <img src="Images/Elephants_walking.jpg"
+                        alt="Elephants walking through the savannah"
+                        >
+
+                    <div class="trail-content">
+                        <h3>The Savannah Loop</h3>
+
+                        <p>
+                            Enjoy wide-open plains and spectacular wildlife
+                            viewing as you explore the beautiful African savannah.
+                        </p>
+
+                        <a href="trail1.html" class="view-btn">
+                            View Trail
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- River Walk -->
+                <article class="trail-card">
+                    <img src="Images/river_stream.jpg"
+                        alt="Elephants drinking water near a pond"
+                        >
+
+                    <div class="trail-content">
+                        <h3>The River Walk</h3>
+
+                        <p>
+                            Discover the plants, birds and animals that thrive
+                            around rivers and natural water sources.
+                        </p>
+
+                        <a href="trail2.html" class="view-btn">
+                            View Trail
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Mountain Ascent -->
+                <article class="trail-card">
+                    <img src="Images/Mountain_view.jpg"
+                        alt="Beautiful mountain landscape"
+                        >
+
+                    <div class="trail-content">
+                        <h3>The Mountain Ascent</h3>
+
+                        <p>
+                            Take in breathtaking views of the surrounding
+                            landscapes while enjoying an adventurous experience.
+                        </p>
+
+                        <a href="trail3.html" class="view-btn">
+                            View Trail
+                        </a>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
         <section id="services">
-            <h2>Our Services</h2>
-            <article>
-                <h3>Guided Safari Tours</h3>
-                <p>Explore the park with knowledgeable guides who help you discover its wildlife and landscapes.</p>
-            </article>
-            <article>
-                <h3>Wildlife Photography Trips</h3>
-                <p>Enjoy opportunities to photograph Kenya's remarkable animals and scenery.</p>
-            </article>
-            <article>
-                <h3>Accommodation and Adventure Packages</h3>
-                <p>Plan a memorable stay with safari and accommodation options to suit your trip.</p>
-            </article>
+            <h2>Our Safari Services</h2>
+
+            <div class="services-container">
+
+                <!-- Photography -->
+                <article class="services-card">
+                    
+
+                    <div class="services-content">
+                        <h3>Wildlife Photography Trips</h3>
+
+                        <p>
+                            Enjoy opportunities to photograph Kenya's remarkable animals and scenery
+                        </p>
+
+                        <img src="Images/ahmed-sheraz-ISiHGYcbJPs-unsplash.jpg"
+                        alt="Photography"
+                        loading="lazy">
+                    </div>
+                </article>
+
+
+                <!-- Guided Safari Tours -->
+                <article class="services-card">
+                    
+
+                    <div class="services-content">
+                        <h3>Guided Safari Tours</h3>
+
+                        <p>Explore the park with knowledgeable guides who help you discover its wildlife and landscapes.</p>
+
+                        <img src="Images/Safari_lodge_surrounded_by_trees_and_open_countryside.png"
+                        alt="Tourist Swimming"
+                        loading="lazy">
+                    </div>
+                </article>
+
+
+                <!-- Accommodation and Adventure -->
+                <article class="services-card">
+                    
+
+                    <div class="services-content">
+                        <h3>Accommodation and Adventure </h3>
+
+                        <p>Plan a memorable stay with safari and accommodation options to suit your trip</p>
+
+                        <img src="Images/Kingsize_bed.jpg"
+                        alt="Beautiful mountain landscape"
+                        loading="lazy">
+
+                    </div>
+                </article>
+
+            </div>
         </section>
+
+
 
         <section id="destinations">
             <h2>Destinations to Explore</h2>
@@ -65,17 +172,96 @@
 
         <section id="gallery">
             <h2>Safari Gallery</h2>
-            
-                <img src="Images/Lion.jpg" alt="Lion resting in the African grassland" width="300">
-            
-                <img src="Images/Hotel.jpg" alt="Safari lodge surrounded by trees and open countryside" width="300">
-            
+
+            <div class="gallery-container">
+
+                <!-- Previous button -->
+                <button type="button"
+                        class="gallery-btn prev-btn"
+                        aria-label="Previous images">
+                    &#10094;
+                </button>
+
+                <!-- Images viewport -->
+                <div class="gallery-viewport" tabindex="0" role="region"
+                     aria-label="Safari wildlife photographs">
+                    <div class="gallery-track">
+
+                        <img src="Images/Lion_resting_in_the_African_grassland.png"
+                            alt="Lion resting in the African grassland"
+                            loading="lazy">
+
+                        <img src="Images/Safari_accommodation_in_a_natural_African_landscape.png"
+                            alt="Safari accommodation in a natural African landscape"
+                            loading="lazy">
+
+                        <img src="Images/Safari_lodge_surrounded_by_trees_and_open_countryside.png"
+                            alt="Safari lodge surrounded by trees and open countryside"
+                            loading="lazy">
+
+                        <img src="Images/Sun_setting_over_the_wide_African_savannah.png"
+                            alt="Sun setting over the wide African savannah"
+                            loading="lazy">
+
+                        <!-- Add more images here when needed -->
+
+                        <img src="Images/Leopard_walk.jpg"
+                            alt="Leopard walking through the African wilderness"
+                            loading="lazy">
+
+                        <img src="Images/Zebra_close-up.jpg"
+                            alt="Zebra in the African wilderness"
+                            loading="lazy">
+
+                    </div>
+                </div>
+
+                <!-- Next button -->
+                <button type="button"
+                        class="gallery-btn next-btn"
+                        aria-label="Next images">
+                    &#10095;
+                </button>
+
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Email: <a href="mailto:info@tsavotrails.com">info@tsavotrails.com</a> | Phone: <a href="tel:+254700000000">+254 700 000 000</a></p>
-        <p>&copy; 2026 Tsavo Trails. All rights reserved.</p>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Contact us for information about safari tours, wildlife photography trips and accommodation packages.</p>
+            <address>
+                <p>Email: <a href="mailto:info@tsavotrails.com">info@tsavotrails.com</a></p>
+                <p>Phone: <a href="tel:+254700000000">+254 700 000 000</a></p>
+                <p>Location: Nairobi, Kenya</p>
+            </address>
+        </section>
+
+        <section id="quicklinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="trail1.html">The Savannah Loop</a></li>
+                <li><a href="trail2.html">The River Walk</a></li>
+                <li><a href="trail3.html">The Mountain Ascent</a></li>
+            </ul>
+        </section>
+
+        <section id="social-media">
+            <h2>Find Us Online</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            </ul>
+        </section>
+
+        <section id="copyright">
+            <p>&copy; 2026 Tsavo Trails. All rights reserved.</p>
+        </section>
     </footer>
 </body>
 </html>

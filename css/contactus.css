@@ -1,0 +1,401 @@
+/* =========================================================
+   TSAVO TRAILS - CONTACT PAGE STYLES
+   This stylesheet is only for contactus.html.
+   The header and footer are styled to match the homepage.
+   ========================================================= */
+
+/* UNIVERSAL SELECTOR
+   Remove browser default margin and padding and use border-box sizing. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML DOCUMENT SETTINGS
+   Smooth scrolling and account for the sticky header. */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+/* BODY STYLING
+   Use the same font, text colour and light background as the homepage. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #24332d;
+    background: #f5f7f5;
+}
+
+/* =========================================================
+   HEADER
+   Same sticky header, elephant background, logo and navigation
+   as the homepage and the other Tsavo Trails pages.
+   ========================================================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 88px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.78), rgba(8, 25, 27, 0.78)),
+        url("../Images/Elephant_eating_bushes.jpg") center 42% / cover no-repeat;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* The logo is inside an anchor link in the HTML. */
+header > a {
+    display: block;
+    flex-shrink: 0;
+}
+
+header > a img {
+    display: block;
+    width: 145px;
+    max-height: 68px;
+    object-fit: contain;
+}
+
+/* Align the navigation to the right side of the header. */
+header nav {
+    margin-left: auto;
+    align-self: flex-end;
+    padding-bottom: 6px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    transition: color 0.25s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    color: #f4a261;
+}
+
+/* =========================================================
+   Contact Intro
+   ========================================================= */
+#contact-intro {
+    min-height: 340px;
+    padding: 80px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    background:
+        linear-gradient(90deg, rgba(7, 24, 24, 0.78) 0%, rgba(7, 24, 24, 0.42) 58%, rgba(7, 24, 24, 0.12) 100%),
+        url("../Images/sara-dubler-Koei_7yYtIo-unsplash.jpg") center 45% / cover no-repeat;
+}
+
+#contact-intro h1 {
+    margin-bottom: 14px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+#contact-intro p {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   CONTACT FORM SECTION
+   Centre the form in a clean white card with a subtle shadow.
+   ========================================================= */
+#contact-form {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 48px;
+    background: #fff;
+    border: 1px solid #e5ece6;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(22, 55, 42, 0.09);
+}
+
+#contact-form h2 {
+    margin-bottom: 30px;
+    color: #174b3a;
+    text-align: center;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.25;
+}
+
+#contact-form h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 4px;
+    background: #e98b4a;
+}
+
+/* Labels make it clear what information belongs in each field. */
+#contact-form label {
+    display: block;
+    margin: 17px 0 7px;
+    color: #294b3c;
+    font-weight: 700;
+}
+
+/* Shared style for text fields, dropdown and message area. */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: #24332d;
+    background: #fbfcfb;
+    border: 1px solid #cbd7ce;
+    border-radius: 7px;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Highlight the field currently selected by the visitor. */
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    background: #fff;
+    border-color: #287354;
+    box-shadow: 0 0 0 3px rgba(40, 115, 84, 0.14);
+}
+
+/* Give the message box enough height and allow vertical resizing. */
+#contact-form textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+/* Style the submit button using the website's green and orange colours. */
+#contact-form input[type="submit"] {
+    display: inline-block;
+    min-width: 150px;
+    margin-top: 18px;
+    padding: 13px 28px;
+    color: #fff;
+    background: #174b3a;
+    border: 0;
+    border-radius: 26px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus-visible {
+    background: #e98b4a;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER
+   Same homepage footer layout, elephant background image,
+   dark overlay, colours, typography and link styling.
+   ========================================================= */
+footer {
+    padding: 58px 8% 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+    background:
+        linear-gradient(rgba(8, 25, 27, 0.88), rgba(8, 25, 27, 0.90)),
+        url("../Images/Elephant_eating_bushes.jpg") center 55% / cover no-repeat;
+    color: #fff;
+}
+
+footer section {
+    flex: 1 1 190px;
+}
+
+footer #contact-info {
+    flex: 2 1 300px;
+}
+
+footer h2 {
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+footer p,
+footer address {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.93rem;
+    font-style: normal;
+}
+
+footer address p {
+    margin-top: 8px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 7px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #ffc08a;
+    text-decoration: underline;
+}
+
+footer #copyright {
+    flex: 0 0 100%;
+    margin-top: 18px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   TABLET RESPONSIVE DESIGN
+   Reduce the form width and side spacing on medium screens.
+   ========================================================= */
+@media (max-width: 900px) {
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #contact-form {
+        width: calc(100% - 10%);
+        padding: 38px;
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   Stack the header and make the form comfortable to use
+   on narrow phone screens.
+   ========================================================= */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    header {
+        min-height: auto;
+        padding: 12px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header > a img {
+        width: 120px;
+        max-height: 55px;
+    }
+
+    header nav {
+        width: 100%;
+        margin: 0;
+        align-self: auto;
+        padding-bottom: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    header nav a {
+        font-size: 0.72rem;
+    }
+
+    #contact-intro {
+        min-height: 300px;
+        padding: 65px 7%;
+        background-position: 58% center;
+    }
+
+    #contact-intro h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    #contact-intro p {
+        font-size: 0.98rem;
+    }
+
+    #contact-form {
+        width: calc(100% - 10%);
+        margin: 40px auto;
+        padding: 28px 20px;
+    }
+
+    #contact-form h2 {
+        font-size: 1.55rem;
+    }
+
+    #contact-form input[type="submit"] {
+        width: 100%;
+    }
+
+    footer {
+        padding: 45px 7% 20px;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    footer section,
+    footer #contact-info {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+/* ACCESSIBILITY
+   Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
