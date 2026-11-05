@@ -4,8 +4,7 @@
    The header and footer use the same design as the homepage.
    ========================================================= */
 
-/* UNIVERSAL SELECTOR
-   Remove browser default margin and padding and use border-box sizing. */
+/* UNIVERSAL SELECTOR */
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +18,7 @@ html {
     scroll-padding-top: 105px;
 }
 
-/* BODY STYLING
-   Use the same font, text colour and background as the homepage. */
+/* BODY STYLING */
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;

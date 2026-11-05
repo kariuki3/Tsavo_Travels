@@ -61,8 +61,7 @@ header {
 }
 
 
-/* Logo link and image
-   - The logo is inside an anchor in the HTML, so style the anchor and its image. */
+/* Logo link and image */
 header > a {
     display: block;
     flex-shrink: 0;
@@ -282,8 +281,7 @@ main > section:not(#hero) h2::after {
     font-size: 2.3rem;
 }
 
-/* Services cards container
-   - CSS Grid arranges the service cards in equal columns on desktop. */
+/* Services cards container */
 .services-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -474,7 +472,7 @@ footer {
     justify-content: space-between;
     gap: 35px;
 
-    /* Reuse the elephant photograph from the header */
+    /* Reused the elephant photograph from the header */
     background:
         linear-gradient(rgba(8, 25, 27, 0.88), rgba(8, 25, 27, 0.90)),
         url("../Images/Elephant_eating_bushes.jpg") center 55% / cover no-repeat;
